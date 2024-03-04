@@ -1,4 +1,4 @@
-$desthosts = @("TAB0018", "TAB0033", "TAB0078", "TAB0081")
+$desthosts = @()
 foreach ($rem in $desthosts){ 
 
 	$path1 = read-host "what is the SMB path of the remote damaged file?" ; `

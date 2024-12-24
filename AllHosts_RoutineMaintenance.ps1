@@ -1,12 +1,18 @@
 $desthosts = Get-Content -Path $home\desktop\all_hostnames.txt
 foreach ($rem in $desthosts){ 
-	invoke-command -computername  $rem -scriptblock {
-			cmd.exe /c del /q /f /s %systemroot%\temp\* ; `
-			cmd.exe /c del /q /f /s %TEMP%\* ; `
-			cmd.exe /c defrag c: ; `
-			cmd /c sfc /scannow ; `
-   			cmd.exe /c chkdsk ;`
-			cmd.exe /c sigverif ;`
-			clear-recyclebin ;`
+		try{
+			invoke-command -computername  $rem -scriptblock {
+				cmd.exe /c del /q /f /s %systemroot%\temp\* ; `
+				cmd.exe /c del /q /f /s %TEMP%\* ; `
+				start-process -filepath "defrag.exe" -argumentlist "c:" -nonewwindow -wait ; `
+				start-process -filepath "sfc.exe" -argumentlist "/scannow" -nonewwindow -wait ; `
+   				start-process -filepath "chkdsk.exe" -nonewwindow -wait ;`
+				start-process -filepath "chkdsk.exe" -nonewwindow -wait ;`
+				start-process -filepath "sigverif.exe" -nonewwindow -wait ; `
+				clear-recyclebin -force -erroraction silentlyignore ;`
+				}
+		}
+		catch{
+				write-error "Failed to execute maintenance on $rem: $_"
 			}
-	}
+		}

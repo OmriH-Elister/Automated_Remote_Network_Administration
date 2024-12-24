@@ -5,7 +5,8 @@ foreach ($rem in $desthosts){
 			cmd.exe /c del /q /f /s %TEMP%\* ; `
 			cmd.exe /c defrag c: ; `
 			cmd /c sfc /scannow ; `
-   			cmd.exe /c chkdsk ;'
-      			cmd.exe /c sigverif ;`
+   			cmd.exe /c chkdsk ;`
+			cmd.exe /c sigverif ;`
+			clear-recyclebin ;`
 			}
 	}

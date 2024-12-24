@@ -12,7 +12,9 @@ foreach ($rem in $desthosts){
 				clear-recyclebin -force -erroraction silentlyignore ;`
 				}
 		}
-		catch{
-				write-error "Failed to execute maintenance on $rem: $_"
+		catch{        	$errorMessage = "[$(Get-Date)] Failed to execute maintenance on $rem: $_"
+		        	Write-Error $errorMessage
+			        Add-Content -Path logFile.txt -Value $errorMessage
+			
 			}
 		}

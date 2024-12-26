@@ -12,7 +12,7 @@ foreach ($rem in $desthosts){
 				DISM /cleanup-image /restorehealth ;`
 				}
 		}
-		catch{        	$errorMessage = "[$(Get-Date)] Failed to execute maintenance on $rem: $_"
+		catch{        	$errorMessage = "[$(Get-Date)] Failed to execute maintenance on $rem : $_"
 		        	Write-Error $errorMessage
 			        Add-Content -Path logFile.txt -Value $errorMessage
 			

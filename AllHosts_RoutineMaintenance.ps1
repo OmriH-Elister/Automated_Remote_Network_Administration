@@ -8,7 +8,7 @@ foreach ($rem in $desthosts){
 				start-process -filepath "sfc.exe" -argumentlist "/scannow" -nonewwindow -wait ; `
    				start-process -filepath "chkdsk.exe" -argumentlist "/f" -nonewwindow -wait ;`
 				start-process -filepath "sigverif.exe" -nonewwindow -wait ; `
-				clear-recyclebin -force -erroraction silentlyignore ;`
+				clear-recyclebin -force -erroraction silentlycontinue ;`
 				}
 		}
 		catch{        	$errorMessage = "[$(Get-Date)] Failed to execute maintenance on $rem: $_"

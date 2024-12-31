@@ -12,7 +12,9 @@ while ($True)
 				exit
 				}	
 		else {
+			clear
 			$HNA = read-host "No 'Remote-hosts.txt' file found => no bulk restart action initiated. What is the workstation you wish to reboot's hostname?"
+			restart-computer -computername $hostname -credential $env:USERDOMAIN\$env:USERNAME
 		}
 	}
 	elseif ( $choice1 -eq 'n' ){

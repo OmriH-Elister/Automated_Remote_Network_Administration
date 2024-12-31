@@ -11,6 +11,7 @@ while ($true)
 	write-output "4. I need to ascertain Google Chrome's version on LAN hosts listed in a file"
 	Write-output "5. I need to troubleshoot a remote Ethernet adapter, device has no ethernet IP address"
 	Write-output "6. I need to log off a logged in user from a remote LAN host"
+	Write-output "7. I need to reboot a list of computers from file\I need to reboot a single network device."
 	$PN = read-host "What is your chosen action?"
 	if ($PN -eq "1"){ .\resetpass.ps1 } `
 	elseif ($PN -eq "2"){ .\allhoststfixfile.ps1 } `

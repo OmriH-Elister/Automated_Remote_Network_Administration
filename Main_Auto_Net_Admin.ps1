@@ -19,6 +19,7 @@ while ($true)
 	elseif ($PN -eq "4"){ .\ascert_chrome_ver.ps1 } `
 	elseif ($PN -eq "5"){ .\enable_adapt.ps1 } `
 	elseif ($PN -eq "6"){ start Rem_DC_Script2.bat } `
+	elseif ($PN -eq "7"){ .\restart_computer.ps1 } `
 	else { write-host "Invalid choice!" } `
 	clear
 }	

@@ -23,3 +23,4 @@ It is different in that it is much more thurough in its method of shutting down 
 18. find_daylight_util.ps1 - This script takes a list of hosts as input, loops through each of them and outputs each of the hosts' date of day light savings change.
 19. enabdisab.ps1 - This powershell script enables the user to choose between two methods designed to attempt and fix a dysfunctional cellular adapter. It is a script that runs remotely on a provided list of hosts, so naturally, it needs the remote hosts to each have an alternative functional adapter in order to establish a connection.
 20. Upload&Install_New_Chrome.ps1 - This script takes a list of hosts as input, loops through each of them and attempts to install a specified updated version of Google Chrome. The path to the local chrome's installation file must be stipulated in the script 
+21. GETLOG.ps1 - A script meant to ease the process of retrieving and displaying Window log entries for a specified time window.

@@ -1,6 +1,7 @@
 # Automated_Remote_Network_Administration
 A few scripts (mainly powershell ones) written to ease the process of managing multiple endpoints on a network. 
 Often, they would need slight parameter modification to achieve the needed results. 
+1. Main_Auto_Net_Admin.ps1 - This is an index for the rest of the scripts in the repository. It is meant to be a starting base from which the user can run any of the scripts below ,
 1. Rem_DC_Script1.bat- Automates the process of quering a user on a remote network host, and then disconnecting said user's session with the newly found session ID.  
 2. Rem_DC_Script2.bat - Same as above, with the slight variation of not taking the ID number as input from the user. 
 3. allhosts_routinemaintenance - This is a powershell script that loops through a list of hostnames/ip-addresses on a network and performs routine maintenance tasks on each of them (deletes temporary files, performs disk defragmantaion on their c drives, runs a scan for corruptions within the file-systems and fixes what it can and checks for digital signatures of known system files).

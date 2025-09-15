@@ -6,13 +6,13 @@ while ($True)
 				foreach ($rem in $(get-content Remote-hosts.txt)){
 					restart-computer -computername $hostname -credential $env:USERDOMAIN\$env:USERNAME
 					}
-				clear
+				Clear-Host
 				write-host "All done!"
 				pause
 				exit
 				}	
 			else {
-				clear
+				Clear-Host
 				$HNA = read-host "No 'Remote-hosts.txt' file found => no bulk restart action initiated. What is the workstation you wish to reboot's hostname?"
 				restart-computer -computername $HNA -credential $env:USERDOMAIN\$env:USERNAME
 				}
@@ -23,7 +23,7 @@ while ($True)
 			exit
 			}
 		else{
-			clear
+			Clear-Host
 			write-host "Invalid choice!" 
 			}
 	}

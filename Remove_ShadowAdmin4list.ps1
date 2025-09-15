@@ -4,6 +4,6 @@ foreach ($int in $hosts){ invoke-command -computername $int -scriptblock {
 	remove-localgroupmember -group administrators -member sombregato ;
 	remove-localuser -name sombregato ;
 	cmd /c 'echo yes | reg delete "HKLM\SYSTEM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" ';
-	echo 'success'
+	Write-Output 'success'
 	}
 	}

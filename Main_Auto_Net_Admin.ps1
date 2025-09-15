@@ -34,7 +34,7 @@ while ($true)
 	elseif ($PN -eq "3"){ .\allhosts_startwinrm.ps1 } `
 	elseif ($PN -eq "4"){ .\ascert_chrome_ver.ps1 } `
 	elseif ($PN -eq "5"){ .\enable_adapt.ps1 } `
-	elseif ($PN -eq "6"){ Start-Process Rem_DC_Script2.bat } `
+	elseif ($PN -eq "6"){ $dcChoice = Read-Host "Run disconnection script 1 or 2?"; if ($dcChoice -eq "1") { Start-Process Rem_DC_Script1.bat } elseif ($dcChoice -eq "2") { Start-Process Rem_DC_Script2.bat } else { Write-Host "Invalid choice for disconnection." } } `
 	elseif ($PN -eq "7"){ .\restart_computer.ps1 } `
 	elseif ($PN -eq "8"){ .\uniqueresetpass.ps1 } `
 	elseif ($PN -eq "9"){ .\"Upload&Install_New_Chrome.ps1" } `

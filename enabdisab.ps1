@@ -24,8 +24,8 @@ elseif ($choice -eq "2"){
 				}
 			else
 				{	
-					echo $dest
-					echo $celladap	
+					Write-Output $dest
+					Write-Output $celladap	
 					pause
 					netsh interface ipv4 set address name="$calladap2" dhcp
 					restart-netadapter -name "$celladap2"

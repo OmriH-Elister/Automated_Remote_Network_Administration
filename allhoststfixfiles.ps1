@@ -6,4 +6,4 @@ foreach ($rem in $desthosts){
 	$path3 = read-host "What is the local path for the correct configuration file to be copied over the damaged ones?"
 	copy-item -path $path3 -destination $path1 -force ; `
 	copy-item -path $path3 -destination $path2 -force ; ` 
-	echo "success" ; ` }
+	Write-Output "success" ; ` }

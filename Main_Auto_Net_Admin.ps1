@@ -26,8 +26,8 @@ while ($true)
 	Write-output "19. Determine daylight saving time utility info on host"
 	Write-output "20. Prepare list of hosts to enable WinRM (batch)"
 	Write-output "21. Telnet enumeration loop for all hosts (batch)"
-	Write-output "22. Remote domain controller script 1 (batch)"
-	Write-output "23. Remote domain controller script 2 (batch)"
+	Write-output "22. Remote user disconnection script 1 (batch)"
+	Write-output "23. Remote user disconnection script 2 (batch)"
 	$PN = read-host "What is your chosen action?"
 	if ($PN -eq "1"){ .\resetpass.ps1 } `
 	elseif ($PN -eq "2"){ .\allhoststfixfiles.ps1 } `

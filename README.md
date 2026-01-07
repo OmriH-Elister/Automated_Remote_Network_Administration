@@ -1,5 +1,6 @@
 # Automated_Remote_Network_Administration
-A few scripts (mainly powershell ones) written to ease the process of managing multiple endpoints on a network. 
+The following scripts ( which are mainly powershell ones) were written to ease the process of managing multiple endpoints on a network.
+They could be run seperately, or from a master script which is refers to each of them and runs them upon choosing their designated option number.
 Often, they would need slight parameter modification to achieve the needed results. 
 1. Main_Auto_Net_Admin.ps1 - This is an index for the rest of the scripts in the repository. It is meant to be a starting base from which the user can run any of the scripts below
 2. Rem_DC_Script1.bat- Automates the process of quering a user on a remote network host, and then disconnecting said user's session with the newly found session ID.  
